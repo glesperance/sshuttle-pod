@@ -14,9 +14,9 @@ SSHuttle Pod is specifically designed to be used with [sshuttle](https://github.
 
 To build Docker image:
 
-\```bash
+```bash
 npm run docker-build
-\```
+```
 
 This will generate a new Docker image named `sshuttle:latest`.
 
@@ -24,9 +24,9 @@ This will generate a new Docker image named `sshuttle:latest`.
 
 Once the Docker image is built successfully, push the Docker image to Docker Hub:
 
-\```bash
+```bash
 npm run docker-push
-\```
+```
 
 This pushes the Docker image to your Docker Hub repository.
 
@@ -34,9 +34,9 @@ This pushes the Docker image to your Docker Hub repository.
 
 Start the Docker container using Docker Compose:
 
-\```bash
+```bash
 docker-compose up
-\```
+```
 
 Your SSH server should now be running and visible on the exposed port 2222.
 
@@ -46,6 +46,6 @@ Your SSH server should now be running and visible on the exposed port 2222.
 
 Here's an example of how to define it:
 
-\```env
+```env
 SSH_AUTHORIZED_KEYS="ssh-rsa YOUR_RSA_PUBLIC_KEY"
-\```
+```
