@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  ssh-server:
+    build: .
+    environment:
+      SSH_AUTHORIZED_KEYS: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCkD5JKZKcsbq2J0zhbBTZYprIXZRsf+cUVKHxwYpadQoTFgI5G5MdmPkb/mTqHLs30XgkqfXI4R3unF4yLhNWnEqyO7crVpAGr72vxOVKv0ANEIN7+s8z1mn6Lz/IIL+FYtSrUhZo8TtLyfYheXWTk0N/iR4XHE6BEIxPn+ItC5+21ntuePPRO26wpqovNJj8k7TypHdmks8l86B2kpnfwEUz3Wc4C5HW4rKHGuM+Y7MXMyoL1Wmsed46agX0mBLEcTVUf/7Ae6o4axJPKgg3qRCZhd7ei2LlY85OmvwBRqhjFjNlNTq6pzRGvnhtIj/uWR10GRgwg31va4vJw+YbzW3DhxehqkSwnzZapcSARjoVryAMuH0S4K3qlvrAjztzzMuzjWZATnhL7UQ3a2T8yZFiDpmTseZCIyxpB1/IOxhBDpkxqzC0SqCG+cYdU9xfrAfNFf7CiySpU7t0gqUq2aDdSRmeuMGPiYH+OvmzTzLD0CJYyAYodhH/M5pi8QDYaDm8pbBTao5NUuhDkW9i/PwbjPn680OYY5ztGTn0xU1GlHiEmx/Re1WzWnxXYOdXp2YbQLmyhnEJxzYd1SfTWBjjiNWIKYzpG/A7uzOsrZZN9kVYEya8ck6Kv2cWEa3YUjcE2JBhHiMfE/+SskE6xYwjJQzkzgItrkJ3LffRWFQ=="
+    ports:
+      - "2222:2222"

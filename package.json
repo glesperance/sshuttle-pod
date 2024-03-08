@@ -1,0 +1,13 @@
+{
+  "name": "sshuttle-pod",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker-build": "docker build -t sshuttle . && docker tag sshuttle:latest trampolineai/sshuttle:latest",
+    "docker-push": "docker push trampolineai/sshuttle:latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
