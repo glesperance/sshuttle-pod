@@ -42,10 +42,12 @@ Your SSH server should now be running and visible on the exposed port 2222.
 
 ## Environment variables
 
+`USER`: This variable is used to set the username. If not specified, it defaults to sshuttle.
 `SSH_AUTHORIZED_KEYS`: this is used to set the SSH public keys that will be used by the server for authorization.
 
-Here's an example of how to define it:
+eg.
 
 ```env
+USER="retool"
 SSH_AUTHORIZED_KEYS="ssh-rsa YOUR_RSA_PUBLIC_KEY"
 ```

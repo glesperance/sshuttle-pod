@@ -14,11 +14,16 @@ RUN useradd -m -d /home/sshuttle sshuttle
 RUN mkdir /var/run/sshd
 # RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 
+# Change the default SSH port
 RUN sed -i 's/#Port 22/Port 2222/' /etc/ssh/sshd_config
+
 # Disable root login
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 RUN sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+
+# Enable ssh-rsa algorithm
+RUN echo 'PubkeyAcceptedKeyTypes +ssh-rsa' >> /etc/ssh/sshd_config
 
 # Copy the entrypoint script
 COPY entrypoint.sh /entrypoint.sh

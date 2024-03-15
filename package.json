@@ -1,11 +1,12 @@
 {
   "name": "sshuttle-pod",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docker-build": "docker build -t sshuttle . && docker tag sshuttle:latest trampolineai/sshuttle:latest",
-    "docker-push": "docker push trampolineai/sshuttle:latest"
+    "docker-build": "docker build -t sshuttle . && pnpm docker-tag",
+    "docker-tag": "docker tag sshuttle:latest trampolineai/sshuttle:latest && docker tag sshuttle:latest trampolineai/sshuttle:$(node -p -e \"require('./package.json').version\")",
+    "docker-push": "docker push trampolineai/sshuttle:latest && docker push trampolineai/sshuttle:$(node -p -e \"require('./package.json').version\")"
   },
   "keywords": [],
   "author": "",
